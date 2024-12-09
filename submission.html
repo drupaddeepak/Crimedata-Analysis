@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission</title>
+    <link rel="stylesheet" href="./static/submission.css">
+</head>
+<body>
+    <h1>Thank you, {{ name }}!</h1>
+    <p>Your stress level is: <strong>{{ stress_level }}</strong></p>
+    <p>Total Stress Score: {{ total_stress }}</p>
+
+    {% if extra_content.spotify %}
+        <div class="extra-content">
+            <p>Relax with this Spotify playlist:</p>
+            <a href="{{ extra_content.spotify }}" target="_blank">Open Playlist</a>
+        </div>
+    {% elif extra_content.youtube %}
+        <div class="extra-content">
+            <p>Watch this YouTube video for relaxation:</p>
+           
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/CS0UAH2UhQw?si=waClz_cvv9Fzm-BD" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    {% elif extra_content.doctor %}
+        <div class="doctor-info">
+            <p>We recommend consulting a doctor:</p>
+            <img src="{{ extra_content.doctor.image }}" alt="Doctor" width="200">
+            <p>Name: {{ extra_content.doctor.name }}</p>
+            <p>Specialty: {{ extra_content.doctor.type }}</p>
+            <p>Phone: {{ extra_content.doctor.phone }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>
