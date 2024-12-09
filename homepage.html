@@ -1,48 +1,261 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUVAMITRA</title>
-    <link rel="stylesheet" href="home.css">
-</head>
-<body>
-    <div class="container">
-        <div class="img_flex" id="img_moving">
-            <div class="logo">
-                <img src="https://t3.ftcdn.net/jpg/06/26/61/52/360_F_626615244_qxqs6v980nvQtZ1XGpiDDrleiHCFfT2h.jpg", alt="Yuvamitra" id="images">
-                
-                
-            </div>
-    
-            <!-- Website Title and Slogan -->
-            <div class="title">
-                <h1 id="titleyuva">YUVAMITRA</h1>
-                <p class="slogan">"A Friend to Support your Mental Health"</p>
-            </div>
-    
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        </div>
-      
+/* Root Variables */
+:root {
+    --primary-color: rgb(16, 160, 237);
+    --secondary-color: #3b4d7d;
+    --light-bg: #f4f9ff;
+    --dark-bg: #333333;
+    --font-color: #444;
+    --border-radius: 1rem;
+    --transition-speed: 0.3s ease-in-out;
+}
 
-        <!-- Description Box -->
-        <div class="description-box">
-            <p class="description-boxes">
-                Welcome to Yuvamitra , a safe space to understand and reflect on your mental well-being.
-                Take the first step toward self-care and support with our simple mental health check.
-                Remember, you are not alone we are here for you.
-            </p>
-        </div>
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--font-color);
+    background: var(--light-bg);
+    scroll-behavior: smooth;
+    line-height: 1.6;
+    transition: background var(--transition-speed), color var(--transition-speed);
+}
 
-        <!-- Mental Health Check Box -->
-        <div class="check-box">
-            <p class="check-boxes">Check your mental health</p>
-        </div>
+/* Header */
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background var(--transition-speed);
+}
 
-        <!-- Enter Button -->
-        <div class="enter-button">
-            <button onclick="window.location.href='/survey'">Enter</button>
-        </div>
-    </div>
-</body>
-</html>
+header:hover {
+    background: var(--secondary-color);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#images {
+    height: 60px;
+    transition: transform var(--transition-speed);
+}
+
+#images:hover {
+    transform: scale(1.1);
+}
+
+#titleyuva {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color var(--transition-speed);
+    text-transform: uppercase;
+}
+
+/* Navigation */
+.navbar {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+    transition: color var(--transition-speed), transform var(--transition-speed);
+}
+
+.navbar a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--secondary-color);
+    transition: width var(--transition-speed);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.navbar a:hover {
+    color: var(--dark-bg);
+    transform: scale(1.05);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Main Section */
+.section {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    opacity: 1;
+    transition: opacity var(--transition-speed), transform var(--transition-speed);
+}
+
+/* Survey Section */
+#survey {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section h2 {
+    font-size: 2.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 1rem auto;
+    transition: width var(--transition-speed);
+}
+
+.section h2:hover::after {
+    width: 120px;
+}
+
+.section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    color: var(--font-color);
+}
+
+/* Quotes Section */
+.quotes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.quote-card {
+    background: var(--light-bg);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    cursor: pointer;
+}
+
+.quote-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.quote-card p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.quote-card h3 {
+    margin-top: 1rem;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Button Styling */
+.enter-button button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.enter-button button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: var(--dark-bg);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+    transition: background var(--transition-speed);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section h2 {
+        font-size: 2.4rem;
+    }
+
+    .quote-card {
+        padding: 1.5rem;
+    }
+
+    .quotes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
