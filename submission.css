@@ -1,0 +1,113 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #4c77af;
+    --secondary-color: #35227e;
+    --light-bg: #f2f6fc;
+    --dark-bg: #333;
+    --font-color: #555;
+    --border-radius: 1rem;
+    --transition-speed: 0.3s ease-in-out;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--font-color);
+    background: var(--light-bg);
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+/* Heading */
+h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* Stress Level and Total Stress */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--font-color);
+}
+
+/* Emphasize the Stress Level */
+strong {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+/* Extra Content Section */
+.extra-content {
+    margin-top: 2rem;
+}
+
+/* Spotify Link */
+.extra-content a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.extra-content a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* YouTube Video */
+iframe {
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Doctor Recommendation */
+.doctor-info {
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.doctor-info img {
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.doctor-info p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: var(--font-color);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+}
