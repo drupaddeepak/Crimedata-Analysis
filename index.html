@@ -1,116 +1,343 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mental Health Survey</title>
+
     <link rel="stylesheet" href="../static/style.css">
+
 </head>
+
 <body>
+
     <header>
+
         <h1>Mental Health Survey</h1>
+
     </header>
+
     <main>
-        <form action="/submit" method="POST" class="formss">
+
+        <form action="/submit" method="POST" class="forms">
+
             <div id="centers">
+
                 <label for="name">Name:</label>
+
                 <input type="text" id="name" name="name" required><br>
 
+
+
                 <label for="age">Age:</label>
+
                 <input type="number" id="age" name="age" required><br>
 
+
+
                 <label for="gender">Gender:</label>
+
                 <select id="gender" name="gender" required>
+
                     <option value="" hidden>Select Gender</option>
+
                     <option value="Male">Male</option>
+
                     <option value="Female">Female</option>
+
                     <option value="Other">Other</option>
+
                 </select><br>
+
             </div>
+
+
 
             <h3>Survey Questions</h3>
 
-            <label for="q1">How often do you feel you are not capable or doubt your abilities?</label><br>
+
+
+            <label for="q1">How would you rate your mental health right now?</label><br>
+
             <select id="q1" name="q1" required>
+
                 <option value="" hidden>Select...</option>
-                <option value="1">Never</option>
-                <option value="2">Rarely</option>
-                <option value="3">Sometimes</option>
-                <option value="4">Often</option>
-                <option value="5">Always</option>
+
+                <option value="1">Excellent</option>
+
+                <option value="2">Very Good</option>
+
+                <option value="3">Good</option>
+
+                <option value="4">Fair</option>
+
+                <option value="5">Poor</option>
+
+                <option value="6">Very Poor</option>
+
             </select><br>
 
-            <label for="q2">Do you avoid answering questions in class because you fear being judged, even if you know the answer?</label><br>
+
+
+            <label for="q2">How often do you feel stressed about academic or personal challenges?</label><br>
+
             <select id="q2" name="q2" required>
+
                 <option value="" hidden>Select...</option>
+
                 <option value="1">Never</option>
+
                 <option value="2">Rarely</option>
+
                 <option value="3">Sometimes</option>
+
                 <option value="4">Often</option>
+
                 <option value="5">Always</option>
+
             </select><br>
 
-            <label for="q3">Do you find it difficult to speak up and share your opinions in group discussions?</label><br>
+
+
+            <label for="q3">How many hours of sleep do you usually get per night?</label><br>
+
             <select id="q3" name="q3" required>
+
                 <option value="" hidden>Select...</option>
-                <option value="1">Strongly Disagree</option>
-                <option value="2">Disagree</option>
-                <option value="3">Neutral</option>
-                <option value="4">Agree</option>
-                <option value="5">Strongly Agree</option>
+
+                <option value="1">Less than 4</option>
+
+                <option value="2">4–6</option>
+
+                <option value="3">6–8</option>
+
+                <option value="4">More than 8</option>
+
             </select><br>
 
-            <label for="q4">Do you often feel isolated or alone?</label><br>
+
+
+            <label for="q4">How often do you experience self-doubt in academic or personal decisions?</label><br>
+
             <select id="q4" name="q4" required>
+
                 <option value="" hidden>Select...</option>
+
                 <option value="1">Never</option>
+
                 <option value="2">Rarely</option>
+
                 <option value="3">Sometimes</option>
+
                 <option value="4">Often</option>
+
                 <option value="5">Always</option>
+
             </select><br>
 
-            <label for="q5">Do you find it difficult to focus during exams?</label><br>
+
+
+            <label for="q5">Are you aware of mental health resources available in your college or community?</label><br>
+
             <select id="q5" name="q5" required>
+
                 <option value="" hidden>Select...</option>
-                <option value="1">Never</option>
-                <option value="2">Rarely</option>
-                <option value="3">Sometimes</option>
-                <option value="4">Often</option>
-                <option value="5">Always</option>
+
+                <option value="1">Yes</option>
+
+                <option value="2">No</option>
+
+                <option value="3">Not Sure</option>
+
             </select><br>
 
-            <label for="q6">How often do you feel like you don't have anyone to talk about your problems?</label><br>
+
+
+            <label for="q6">Have you used any mental health services in the last 12 months?</label><br>
+
             <select id="q6" name="q6" required>
+
                 <option value="" hidden>Select...</option>
-                <option value="1">Never</option>
-                <option value="2">Rarely</option>
-                <option value="3">Sometimes</option>
-                <option value="4">Often</option>
-                <option value="5">Always</option>
+
+                <option value="1">Yes</option>
+
+                <option value="2">No</option>
+
             </select><br>
 
-            <label for="q7">Do you have trouble sleeping due to stress and overthinking?</label><br>
+
+
+            <label for="q7">Do you feel that your academic workload affects your mental health?</label><br>
+
             <select id="q7" name="q7" required>
+
                 <option value="" hidden>Select...</option>
-                <option value="1">Never</option>
-                <option value="2">Rarely</option>
-                <option value="3">Sometimes</option>
-                <option value="4">Often</option>
-                <option value="5">Always</option>
+
+                <option value="1">Yes</option>
+
+                <option value="2">No</option>
+
+                <option value="3">Not Sure</option>
+
             </select><br>
 
-            <label for="q8">How often do you feel like your stress is affecting your daily life?</label><br>
+
+
+            <label for="q8">How would you describe your current level of happiness?</label><br>
+
             <select id="q8" name="q8" required>
+
                 <option value="" hidden>Select...</option>
-                <option value="1">Never</option>
-                <option value="2">Rarely</option>
-                <option value="3">Sometimes</option>
-                <option value="4">Often</option>
-                <option value="5">Always</option>
+
+                <option value="1">Very Happy</option>
+
+                <option value="2">Happy</option>
+
+                <option value="3">Neutral</option>
+
+                <option value="4">Unhappy</option>
+
+                <option value="5">Very Unhappy</option>
+
             </select><br>
+
+
+
+            <label for="q9">How often do you practice mindfulness, meditation, or other relaxation techniques to reduce your stress?</label><br>
+
+            <select id="q9" name="q9" required>
+
+                <option value="" hidden>Select...</option>
+
+                <option value="1">Yes, Regularly</option>
+
+                <option value="2">Yes, Occasionally</option>
+
+                <option value="3">No, Never</option>
+
+            </select><br>
+
+
+
+            <label for="q10">Do you feel supported by your friends when you are stressed?</label><br>
+
+            <select id="q10" name="q10" required>
+
+                <option value="" hidden>Select...</option>
+
+                <option value="1">Yes, Always</option>
+
+                <option value="2">Yes, Sometimes</option>
+
+                <option value="3">No</option>
+
+            </select><br>
+
+
+
+            <label for="q11">How comfortable are you discussing your mental health with family members?</label><br>
+
+            <select id="q11" name="q11" required>
+
+                <option value="" hidden>Select...</option>
+
+                <option value="1">Very Comfortable</option>
+
+                <option value="2">Somewhat Comfortable</option>
+
+                <option value="3">Neutral</option>
+
+                <option value="4">Not Comfortable</option>
+
+                <option value="5">Very Uncomfortable</option>
+
+            </select><br>
+
+
+
+            <label for="q12">Do you feel that social media impacts your mental health positively or negatively?</label><br>
+
+            <select id="q12" name="q12" required>
+
+                <option value="" hidden>Select...</option>
+
+                <option value="1">Positively</option>
+
+                <option value="2">Negatively</option>
+
+                <option value="3">Neutral</option>
+
+                <option value="4">Not Sure</option>
+
+            </select><br>
+
+
+
+            <label for="q13">How much time do you spend on social media daily?</label><br>
+
+            <select id="q13" name="q13" required>
+
+                <option value="" hidden>Select...</option>
+
+                <option value="1">Less than 1 hour</option>
+
+                <option value="2">1–2 hours</option>
+
+                <option value="3">2–4 hours</option>
+
+                <option value="4">More than 4 hours</option>
+
+            </select><br>
+
+
+
+            <label for="q14">Do you feel comfortable reaching out to a counselor or mental health professional?</label><br>
+
+            <select id="q14" name="q14" required>
+
+                <option value="" hidden>Select...</option>
+
+                <option value="1">Very Comfortable</option>
+
+                <option value="2">Somewhat Comfortable</option>
+
+                <option value="3">Neutral</option>
+
+                <option value="4">Not Comfortable</option>
+
+                <option value="5">Very Uncomfortable</option>
+
+            </select><br>
+
+
+
+            <label for="q15">Are you aware of the signs of stress, anxiety, or depression?</label><br>
+
+            <select id="q15" name="q15" required>
+
+                <option value="" hidden>Select...</option>
+
+                <option value="1">Yes</option>
+
+                <option value="2">No</option>
+
+                <option value="3">Somewhat</option>
+
+            </select><br>
+
+
+
             <button type="submit">Submit</button>
+
         </form>
+
     </main>
+
 </body>
+
 </html>
