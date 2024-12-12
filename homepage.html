@@ -30,48 +30,112 @@
     <main>
         <!-- Survey Section -->
         <section id="survey" class="section">
-            <h2>Mental Health Check</h2>
-            <p>
-                Start your mental health check today. Answer a few simple questions to gain insights into your mental well-being.
+            <h2 id="movinganimation">Mental Health Check</h2>
+            <p  id="highlight">
+                A Friend to Support your Mental Health.
             </p>
             <div class="enter-button">
                 <button onclick="window.location.href='/survey'">Start Survey</button>
             </div>
         </section>
 
-        <!-- Quotes Section -->
-        <section id="quotes" class="section">
-            <h2>Inspirational Quotes</h2>
-            <div class="quotes-grid">
-                <div class="quote-card">
-                    <p>“Mental health needs a great deal of attention. It’s the final taboo and it needs to be faced and dealt with.”</p>
-                    <h3>- Adam Ant</h3>
-                </div>
-                <div class="quote-card">
-                    <p>“What mental health needs is more sunlight, more candor, and more unashamed conversation.”</p>
-                    <h3>- Glenn Close</h3>
-                </div>
-                <div class="quote-card">
-                    <p>“Sometimes self-care is doing the thing that will make you more miserable now to make you happier later.”</p>
-                    <h3>- Brianna Wiest</h3>
-                </div>
-                <div class="quote-card">
-                    <p>“Health is not just about what you’re eating. It’s also about what you’re thinking and saying.”</p>
-                    <h3>- Rujuta Diwekar</h3>
-                </div>
+<!-- Quotes Section -->
+<section id="quotes" class="section">
+    <h2>Inspirational Quotes</h2>
+    <div class="quotes-wrapper">
+        <div class="quotes-grid">
+            <!-- Original quote cards -->
+            <div class="quote-card">
+                <p>“Mental health needs a great deal of attention. It’s the final taboo and it needs to be faced and dealt with.”</p>
+                <h3>- Adam Ant</h3>
             </div>
-        </section>
+            <div class="quote-card">
+                <p>“What mental health needs is more sunlight, more candor, and more unashamed conversation.”</p>
+                <h3>- Glenn Close</h3>
+            </div>
+            <div class="quote-card">
+                <p>“Sometimes self-care is doing the thing that will make you more miserable now to make you happier later.”</p>
+                <h3>- Brianna Wiest</h3>
+            </div>
+            <div class="quote-card">
+                <p>“Health is not just about what you’re eating. It’s also about what you’re thinking and saying.”</p>
+                <h3>- Rujuta Diwekar</h3>
+            </div>
+            <div class="quote-card">
+                <p>“Meditation makes the mind fresh, energetic, and intuitive. It helps us manage our thoughts, emotions, and actions better.”</p>
+                <h3>- Sri Sri Ravi Shankar</h3>
+            </div>
+            <div class="quote-card">
+                <p>“Our minds are endlessly trying to make sense of the world, but sometimes the best thing you can do for your mental health is to pause and let the world just be."</p>
+                <h3>- Arundhati Roy</h3>
+            </div>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <h2>About Us</h2>
-            <p>
-                Yuvamitra is your companion on the journey to mental wellness. 
-                Our mission is to provide a safe space where you can reflect on your mental well-being 
-                and take proactive steps toward self-care.
-            </p>
-        </section>
-    </main>
+            <!-- Duplicate quote cards for seamless scrolling -->
+            <div class="quote-card">
+                <p>“Mental health needs a great deal of attention. It’s the final taboo and it needs to be faced and dealt with.”</p>
+                <h3>- Adam Ant</h3>
+            </div>
+            <div class="quote-card">
+                <p>“What mental health needs is more sunlight, more candor, and more unashamed conversation.”</p>
+                <h3>- Glenn Close</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSS -->
+<style>
+    .quotes-wrapper {
+        overflow: hidden; /* Hide the overflow for smooth scrolling */
+        width: 100%;
+    }
+
+    .quotes-grid {
+        display: flex;
+        gap: 20px;
+        animation: scroll-quotes 15s linear infinite; /* Continuous scrolling animation */
+    }
+
+    .quote-card {
+        flex: 0 0 auto; /* Prevent cards from shrinking or growing */
+        width: 300px; /* Set a consistent width for each card */
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    @keyframes scroll-quotes {
+        0% {
+            transform: translateX(0); /* Start at the initial position */
+        }
+        100% {
+            transform: translateX(-50%); /* Move halfway (duplicates create the loop) */
+        }
+    }
+</style>
+
+
+
+       <!-- About Section -->
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>
+        Yuvamitra is your trusted companion on the journey to mental wellness and personal growth. 
+        We are dedicated to creating a nurturing and inclusive space where you can feel safe, 
+        supported, and empowered to prioritize your mental health.
+    </p>
+    <p>
+        Our mission goes beyond simply raising awareness; we strive to inspire you to reflect deeply 
+        on your emotional well-being, identify areas of growth, and take meaningful, proactive steps toward self-care. 
+        At Yuvamitra, we believe that mental wellness is not just
+
 
     <!-- Footer Section -->
     <footer>
@@ -80,3 +144,4 @@
     </footer>
 </body>
 </html>
+
